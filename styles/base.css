@@ -1,0 +1,95 @@
+:root {
+  --bg-0: #0a0908;
+  --bg-1: #1a1613;
+  --warm-gold: #f0c57c;
+  --soft-white: #f7f1e8;
+}
+
+html, body {
+  background: #090806;
+  color: var(--soft-white);
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a1613 0%, #0d0c0b 35%, #090806 100%);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #1a1613 0%, #0d0c0b 35%, #090806 100%);
+}
+
+.subtitle-container {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  width: min(900px, 80vw);
+  text-align: center;
+  pointer-events: none;
+}
+
+.subtitle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  font-size: 52px;
+  line-height: 1.2;
+  font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", serif;
+  color: rgba(255, 248, 236, 0.96);
+  text-shadow: 0 0 18px rgba(255, 235, 194, 0.2);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.subtitle.active {
+  opacity: 1;
+}
+
+.subtitle .year {
+  color: #f3c77a;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(243, 199, 122, 0.65), 0 0 28px rgba(243, 199, 122, 0.2);
+}
+
+.debug-controls {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(25, 22, 18, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  z-index: 30;
+}
+
+#timeline-slider {
+  width: 220px;
+}
+
+#time-display {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  min-width: 100px;
+}
+
+button {
+  border: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
