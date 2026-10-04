@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熵：从卡诺到霍金</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas" width="1920" height="1080"></canvas>
+        <div id="subtitle-container" class="subtitle-container"></div>
+    </div>
+
+    <!-- 时间轴控制器 (调试用) -->
+    <div class="debug-controls">
+        <input type="range" id="timeline-slider" min="0" max="140" value="0" step="0.1">
+        <span id="time-display">0.0s / 140s</span>
+        <button id="play-btn">▶ Play</button>
+        <button id="pause-btn">⏸ Pause</button>
+        <button id="reset-btn">⟲ Reset</button>
+    </div>
+
+    <script src="js/utils/math.js"></script>
+    <script src="js/utils/easing.js"></script>
+    <script src="js/utils/color.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/effects/particles.js"></script>
+    <script src="js/effects/subtitle.js"></script>
+    <script src="js/effects/background.js"></script>
+    <script src="js/scenes/scene01-title.js"></script>
+    <script src="js/scenes/scene02-carnot.js"></script>
+    <script src="js/scenes/scene03-clausius.js"></script>
+    <script src="js/scenes/scene04-kelvin.js"></script>
+    <script src="js/scenes/scene05-entropy.js"></script>
+    <script src="js/scenes/scene06-life.js"></script>
+    <script src="js/scenes/scene07-maxwell.js"></script>
+    <script src="js/scenes/scene08-boltzmann.js"></script>
+    <script src="js/scenes/scene09-schrodinger.js"></script>
+    <script src="js/scenes/scene10-shannon.js"></script>
+    <script src="js/scenes/scene11-landauer.js"></script>
+    <script src="js/scenes/scene12-hawking.js"></script>
+    <script src="js/scenes/scene13-ending.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
